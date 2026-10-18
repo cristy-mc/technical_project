@@ -1,0 +1,167 @@
+/iiwa2/controller_manager:
+  ros__parameters:
+    update_rate: 225  # Hz
+
+    iiwa_arm_controller:
+      type: position_controllers/JointGroupPositionController
+
+    iiwa_arm_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    velocity_controller:
+      type: velocity_controllers/JointGroupVelocityController
+
+    effort_controller:
+      type: effort_controllers/JointGroupEffortController         
+
+    impedance_controller:
+      type: impedance_controller/ImpedanceController
+
+    ets_state_broadcaster:
+      type: external_torque_sensor_broadcaster/ExternalTorqueSensorBroadcaster
+
+/iiwa2/iiwa_arm_controller:
+  ros__parameters:
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    joints:
+      - iiwa2_joint_a1
+      - iiwa2_joint_a2
+      - iiwa2_joint_a3
+      - iiwa2_joint_a4
+      - iiwa2_joint_a5
+      - iiwa2_joint_a6
+      - iiwa2_joint_a7
+
+    state_publish_rate: 200.0 # Defaults to 50
+    action_monitor_rate: 20.0 # Defaults to 20
+
+/iiwa2/velocity_controller:
+  ros__parameters:
+    joints:
+      - iiwa2_joint_a1
+      - iiwa2_joint_a2
+      - iiwa2_joint_a3
+      - iiwa2_joint_a4
+      - iiwa2_joint_a5
+      - iiwa2_joint_a6
+      - iiwa2_joint_a7
+
+/iiwa2/effort_controller:
+  ros__parameters:
+    joints:
+      - iiwa2_joint_a1
+      - iiwa2_joint_a2
+      - iiwa2_joint_a3
+      - iiwa2_joint_a4
+      - iiwa2_joint_a5
+      - iiwa2_joint_a6
+      - iiwa2_joint_a7
+      
+/iiwa2/impedance_controller:
+  ros__parameters:
+    joints:
+      - iiwa2_joint_a1
+      - iiwa2_joint_a2
+      - iiwa2_joint_a3
+      - iiwa2_joint_a4
+      - iiwa2_joint_a5
+      - iiwa2_joint_a6
+      - iiwa2_joint_a7
+    stiffness: [50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 50.0]
+    damping: [10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0]
+    
+/iiwa2/ets_state_broadcaster:
+  ros__parameters:
+    sensor_name: external_torque_sensor
+    
+    
+    
+/iiwa1/controller_manager:
+  ros__parameters:
+    update_rate: 225  # Hz
+
+    iiwa_arm_controller:
+      type: position_controllers/JointGroupPositionController
+
+    iiwa_arm_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    velocity_controller:
+      type: velocity_controllers/JointGroupVelocityController
+
+    effort_controller:
+      type: effort_controllers/JointGroupEffortController         
+
+    impedance_controller:
+      type: impedance_controller/ImpedanceController
+
+    ets_state_broadcaster:
+      type: external_torque_sensor_broadcaster/ExternalTorqueSensorBroadcaster
+
+/iiwa1/iiwa_arm_controller:
+  ros__parameters:
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    joints:
+      - iiwa1_joint_a1
+      - iiwa1_joint_a2
+      - iiwa1_joint_a3
+      - iiwa1_joint_a4
+      - iiwa1_joint_a5
+      - iiwa1_joint_a6
+      - iiwa1_joint_a7
+
+    state_publish_rate: 200.0 # Defaults to 50
+    action_monitor_rate: 20.0 # Defaults to 20
+
+/iiwa1/velocity_controller:
+  ros__parameters:
+    joints:
+      - iiwa1_joint_a1
+      - iiwa1_joint_a2
+      - iiwa1_joint_a3
+      - iiwa1_joint_a4
+      - iiwa1_joint_a5
+      - iiwa1_joint_a6
+      - iiwa1_joint_a7
+
+/iiwa1/effort_controller:
+  ros__parameters:
+    joints:
+      - iiwa1_joint_a1
+      - iiwa1_joint_a2
+      - iiwa1_joint_a3
+      - iiwa1_joint_a4
+      - iiwa1_joint_a5
+      - iiwa1_joint_a6
+      - iiwa1_joint_a7
+      
+/iiwa1/impedance_controller:
+  ros__parameters:
+    joints:
+      - iiwa1_joint_a1
+      - iiwa1_joint_a2
+      - iiwa1_joint_a3
+      - iiwa1_joint_a4
+      - iiwa1_joint_a5
+      - iiwa1_joint_a6
+      - iiwa1_joint_a7
+    stiffness: [50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 50.0]
+    damping: [10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0]
+    
+/iiwa1/ets_state_broadcaster:
+  ros__parameters:
+    sensor_name: external_torque_sensor
