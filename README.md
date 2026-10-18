@@ -33,13 +33,16 @@ ros2 launch ros2_fra2mo fra2mo_navigation.launch.py
 **3. Start the Robot Arm Controllers:**
 ```
 ros2 run hospital iiwa1_pick_node
-
+```
+```
 ros2 run hospital iiwa2_pick_kdl_node
 ```
 
 **4. Start the Vision and Docking Nodes:**
 ```
 ros2 run hospital object_detector.py
+```
+```
 ros2 run hospital aruco_docking_node.py
 ```
 
